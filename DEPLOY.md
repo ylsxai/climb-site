@@ -1,6 +1,16 @@
 # 部署到 Cloudflare Pages
 
-前置：`main` 分支已推到 GitHub 仓库 `ylsxai/climb-site`。
+**状态：已上线 ✅**
+
+| 项 | 值 |
+|---|---|
+| 线上地址 | <https://climb-site.pages.dev> |
+| Cloudflare 项目名 | `climb-site`（与域名一致，别再改名，否则域名会变） |
+| 连接方式 | GitHub 仓库 `ylsxai/climb-site` → 生产分支 `main` |
+| 触发 | push 到 `main` 自动构建并上线，1–2 分钟 |
+| 构建 | `npm run build` → 输出 `out`，已实测通过 |
+
+下面是当初的配置过程，留作记录；日常改内容完全不用再碰这些。
 
 ## 一次性配置（约 3 分钟）
 

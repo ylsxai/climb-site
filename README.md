@@ -1,6 +1,10 @@
 # 岩点 · 攀岩教学笔记
 
+**线上地址：<https://climb-site.pages.dev>** ｜ 仓库：<https://github.com/ylsxai/climb-site>
+
 一个纯静态的攀岩教学站。内容全部是 Markdown 文件，`npm run build` 出来是一堆 HTML，扔到任何静态托管上就能跑（Cloudflare Pages / Vercel / GitHub Pages 都行）。
+
+push 到 `main` 后 Cloudflare 自动重新构建上线，不用手动部署。
 
 **为什么是静态的**：没有数据库、没有服务器要维护，也不会因为本机断电掉线。后面要加登录、打卡、会员，再单独接 Supabase（见文末路线图），不需要推倒重来。
 
