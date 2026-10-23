@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #16130f;
+  --color-ash: #5c554d;
+  --color-rock: #8b8178;
+  --color-sand: #f8f5f0;
+  --color-chalk: #fffdfa;
+  --color-line: #e4ddd2;
+  --color-ember: #c8452a;
+  --color-ember-soft: #fbeee9;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-sand);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-ember);
+  color: #fff;
+}
+
+/* ---------- 正文排版（不引插件，手写一套够用） ---------- */
+.prose-climb {
+  font-size: 1.0625rem;
+  line-height: 1.95;
+  color: var(--color-ink);
+  word-break: break-word;
+}
+.prose-climb > * + * {
+  margin-top: 1.15em;
+}
+.prose-climb h2 {
+  margin-top: 2.4em;
+  margin-bottom: 0.7em;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--color-line);
+}
+.prose-climb h3 {
+  margin-top: 1.9em;
+  margin-bottom: 0.5em;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.prose-climb h4 {
+  margin-top: 1.6em;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-ash);
+}
+.prose-climb p {
+  margin-bottom: 0.2em;
+}
+.prose-climb strong {
+  font-weight: 700;
+  background: linear-gradient(transparent 62%, var(--color-ember-soft) 62%);
+}
+.prose-climb a {
+  color: var(--color-ember);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.prose-climb ul,
+.prose-climb ol {
+  padding-left: 1.4em;
+}
+.prose-climb ul {
+  list-style: disc;
+}
+.prose-climb ol {
+  list-style: decimal;
+}
+.prose-climb li + li {
+  margin-top: 0.4em;
+}
+.prose-climb li::marker {
+  color: var(--color-rock);
+}
+.prose-climb blockquote {
+  margin: 1.6em 0;
+  padding: 0.2em 0 0.2em 1.1em;
+  border-left: 3px solid var(--color-ember);
+  color: var(--color-ash);
+}
+.prose-climb code {
+  background: #efeadf;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+.prose-climb pre {
+  background: #17140f;
+  color: #f2ece2;
+  padding: 1.1em 1.2em;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+.prose-climb pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+.prose-climb img {
+  border-radius: 10px;
+  margin: 1.6em 0;
+  max-width: 100%;
+  height: auto;
+}
+.prose-climb hr {
+  margin: 2.4em 0;
+  border: 0;
+  border-top: 1px solid var(--color-line);
+}
+.prose-climb table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin: 1.6em 0;
+}
+.prose-climb th,
+.prose-climb td {
+  border-bottom: 1px solid var(--color-line);
+  padding: 0.55em 0.7em;
+  text-align: left;
+}
+.prose-climb th {
+  font-weight: 600;
+  color: var(--color-ash);
+  font-size: 0.85rem;
+}

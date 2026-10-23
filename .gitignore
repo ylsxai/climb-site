@@ -1,0 +1,19 @@
+# 依赖
+node_modules/
+
+# Next.js 构建产物
+.next/
+out/
+
+# 本地缓存 / 日志
+.npm-cache/
+*.log
+npm-debug.log*
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 环境变量（部署时在平台上配，别提交）
+.env
+.env*.local
